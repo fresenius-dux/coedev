@@ -4,9 +4,9 @@
 */
 
 get_header(); ?>
-
-    <section id="Home">
-        <!-- Home Page Content Here -->
-    </section>    
+    
+        <?php get_template_part('tmpl/content','hero'); ?>
+        <?php get_template_part('tmpl/content','practices'); ?>
+        <?php get_template_part('tmpl/content','handoff'); ?>
     
 <?php get_footer(); ?>

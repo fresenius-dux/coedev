@@ -25,7 +25,7 @@
 <![endif]-->
 </head>
 
-<body <?php body_class(); ?> ng-app="mapp" ng-controller="mainCtrl">
+<body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	
 	<!-- HEADER
@@ -38,14 +38,16 @@
 			
 			<div class="navbar navbar-fixed-top" role="navigation">
 				
-				<div class="container">
+				<div class="container-fluid">
 					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="glyphicon glyphicon-align-justify"></span>
-						</button>
+                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                          </button>
 						
-						    <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"> MGB Scholarship Logo Image Placeholder</a>
+						  <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"> <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png" alt=""></a>
 						
 					</div><!-- navbar-header -->
 					
@@ -57,6 +59,7 @@
 							'theme_location'	=> 'primary',
 							'container'			=> 'nav',
 							'container_class'	=> 'navbar-collapse collapse',
+                            'container_id'      => 'navbar',
 							'menu_class'		=> 'nav navbar-nav navbar-right'
 							
 						) );
